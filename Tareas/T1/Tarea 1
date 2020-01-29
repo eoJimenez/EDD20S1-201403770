@@ -1,0 +1,38 @@
+package tarea1edd;
+
+import java.util.Scanner;
+
+public class Tarea1EDD {
+
+    public static void main(String[] args) {
+       int filaActual;
+       int columna;
+       int tamanioMatriz;
+       Scanner Leer = new Scanner(System.in);
+       System.out.println("Ingrese el tamaño de la Matriz");
+       tamanioMatriz = Leer.nextInt();
+        for (filaActual = 1; filaActual <= tamanioMatriz; filaActual++) {
+            for (columna = 1; columna <= tamanioMatriz; columna++) {
+                if (filaActual == 1) {
+                    if (columna <= tamanioMatriz) {
+                        System.out.print("1 ");
+                    }else{
+                        System.out.print("");
+                    }
+                }else if (filaActual == tamanioMatriz) {
+                    System.out.print("1 ");
+                }else{
+                    if  (columna == 1) {
+                        System.out.print("1");
+                    }else if (columna == tamanioMatriz) {
+                        System.out.print(" 1");
+                    }
+                    else if (columna <= tamanioMatriz) {
+                        System.out.print("  ");
+                    }
+                }
+            }
+            System.out.println("");
+        }
+    }
+}
